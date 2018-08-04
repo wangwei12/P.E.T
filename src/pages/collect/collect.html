@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="home">
+    <ion-title class="til">我的收藏</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let i of arr;let l=index">
+      <ion-thumbnail item-start>
+        <img src={{i.img}}>
+      </ion-thumbnail>
+      <h2>{{i.name}}</h2>
+      <button class="btn">包邮</button>
+      <p class="price">￥{{i.price}}</p>
+      <p>
+        <span>xxx店</span>
+        <span class="loc">地点</span>
+      </p>
+      <span class="star">
+        <img src="assets/imgs/star.png" width="25px" (click)='no(l,$event)'>
+      </span>
+    </ion-item>
+  </ion-list>
+</ion-content>

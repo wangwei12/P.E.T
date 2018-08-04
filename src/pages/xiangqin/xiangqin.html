@@ -1,0 +1,81 @@
+<ion-header text-center>
+  <ion-navbar color='home'>
+    <ion-title class="title">宠物相亲</ion-title>
+    <span class="title1" (click)="goFabu()">发布</span>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content">
+
+  <ion-grid text-center class="serve-grid">
+    <ion-row>
+      <ion-col (click)='fuwu()'>
+        <span class="serve">宠物性别</span>
+        <ion-icon name="{{icon}}" class="fuwu"></ion-icon>
+      </ion-col>
+      <ion-col (click)='diqu()'>
+        <span class="city">宠物类别</span>
+        <ion-icon name="{{icon2}}" class="diqu"></ion-icon>
+      </ion-col>
+      <ion-col (click)='dengji()'>
+        <span class="leavl">年龄</span>
+        <ion-icon name="{{icon3}}" class="dengji"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="servelist">
+    <div class="s3">
+      <ion-item class="ser-item1" *ngFor="let item of items;let i=index" (click)='Yes1($event,i)'>
+        <ion-icon name='yes' class="ser-icon"></ion-icon>
+        <span class="ser-span">{{item}}</span>
+      </ion-item>
+    </div>
+  </div>
+  <div class="s1">
+    <div class="ss1">
+      <ion-grid class="serve-grid2">
+        <ion-row>
+          <ion-col col-4 class="ion-col1">
+            <ion-scroll scrollY="true" style="height:334px">
+              <ion-item class="ser-item1" *ngFor="let item of province;let i=index" (click)='Choose(i,$event)' no-borders>
+                <ion-icon name='yes' class="ser-icon"></ion-icon>
+                <span class="ser-span">{{item}}</span>
+              </ion-item>
+            </ion-scroll>
+          </ion-col>
+          <ion-col col-8 class="ion-col2">
+            <ion-scroll scrollY="true" style="height:334px">
+              <ion-item class="ser-item1" *ngFor="let item of city;let j=index" (click)='Yes2($event,j)'>
+                <ion-icon name='yes' class="ser-icon"></ion-icon>
+                <span class="ser-span">{{item}}</span>
+              </ion-item>
+            </ion-scroll>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <div class="servelist2">
+    <div class="s2">
+      <ion-item class="ser-item1" *ngFor="let vip of vips;let i=index" (click)='Yes3($event,i)'>
+        <ion-icon name='yes' class="ser-icon"></ion-icon>
+        <span class="ser-span">{{vip}}</span>
+      </ion-item>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let pets of petcontent;let i=index">
+      <ion-thumbnail item-start>
+        <img src={{pets.img}}>
+      </ion-thumbnail>
+      <h2>{{pets.name}}</h2>
+      <span>{{pets.years}}岁</span>
+      <span>{{pets.sex}}</span>
+      <button (click)="goxiangqinsub(i)" ion-button clear item-end style="color:red">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

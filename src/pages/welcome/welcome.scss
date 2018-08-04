@@ -1,0 +1,11 @@
+page-welcome {
+    ion-content{
+        height: 100%;
+    }
+    .button{
+        position:absolute;
+        left:35%;
+        bottom:25px;
+        z-index:1;
+    }
+}

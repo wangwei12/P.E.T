@@ -1,0 +1,85 @@
+<ion-header text-center>
+
+  <ion-navbar color='home'>
+    <ion-title>
+      <!-- <ion-searchbar placeholder="搜索" class="search"></ion-searchbar> -->
+      宠物商城
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-slides pager loop autoplay='1500' class="slide1">
+    <ion-slide>
+      <img src="assets/imgs/gou02.jpg" height="50%">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/haozi.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/gou.jpg">
+    </ion-slide>
+  </ion-slides>
+  <div>
+    <ion-segment [(ngModel)]="pet" color="home">
+      <ion-segment-button value="class" (click)='f()'>
+        优质宠粮
+      </ion-segment-button>
+      <ion-segment-button value="cloth" (click)='f()'>
+        宠物服饰
+      </ion-segment-button>
+      <ion-segment-button value="toy" (click)='f()'>
+        宠物玩具
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'class'">
+      <ion-item (click)='goshop1(i)' *ngFor="let i of shop;let l=index">
+        <ion-thumbnail item-start>
+          <img src={{i.img}}>
+        </ion-thumbnail>
+        <h2>{{i.name}}</h2>
+        <button class="btn">包邮</button>
+        <p class="price">￥{{i.price}}</p>
+        <p>
+          <span>xxx店</span>
+          <span class="loc">地点</span>
+        </p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'cloth'">
+      <ion-item (click)='goshop1(i)' *ngFor="let i of shop;let l=index">
+        <ion-thumbnail item-start>
+          <img src={{i.img}}>
+        </ion-thumbnail>
+        <h2>{{i.name}}</h2>
+        <button class="btn">包邮</button>
+        <p class="price">￥{{i.price}}</p>
+        <p>
+          <span>xxx店</span>
+          <span class="loc">地点</span>
+        </p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'toy'">
+      <ion-item (click)='goshop1(i)' *ngFor="let i of shop;let l=index">
+        <ion-thumbnail item-start>
+          <img src={{i.img}}>
+        </ion-thumbnail>
+        <h2>{{i.name}}</h2>
+        <button class="btn">包邮</button>
+        <p class="price">￥{{i.price}}</p>
+        <p>
+          <span>xxx店</span>
+          <span class="loc">地点</span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

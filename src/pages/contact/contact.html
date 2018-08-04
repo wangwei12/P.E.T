@@ -1,0 +1,15 @@
+<ion-header text-center>
+  <ion-navbar color='home'>
+    <ion-title>
+      日常互动
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="contact_list">
+    <ion-item *ngFor="let item of items,let i=index" (click)="others(i)">
+      {{item}}
+    </ion-item>
+  </ion-list>
+</ion-content>

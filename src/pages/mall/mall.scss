@@ -1,0 +1,29 @@
+page-mall {
+    .searchbar-md .searchbar-input{
+        border-radius: 50px;
+        border: white 1px solid;
+        background-color: transparent!important
+    }
+    .slide1{
+        height: 30%;
+        width: 100%;
+        padding: 0
+    }
+    .btn{
+        position: relative;
+        top: 2px;
+        border-radius: 50px;
+        border: 1px yellow solid;
+        color:yellow;
+        background-color: transparent
+    }
+    .price{
+        color: red;
+        position: relative;
+        top: 5px
+    }
+    .loc{
+        position: relative;
+        left: 2%;
+    }
+}

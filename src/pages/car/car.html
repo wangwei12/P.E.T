@@ -1,0 +1,46 @@
+<ion-header text-center>
+
+  <ion-navbar color='home'>
+    <ion-title class="til">我的订单</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content">
+  <ion-item class="item1" *ngFor="let i of shop;let l=index" no-lines>
+      <div class="mycheck">
+          <input type="checkbox" class="che" (click)='sum(l,$event)' id="checkbox+{{l}}">
+          <label for="checkbox+{{l}}"></label>
+        </div>
+    <div class="lab">
+      <img src={{i.img}} width='100px' height="85px" class="img">
+      <span class="span1">{{i.name}}</span>
+      <p class="price">￥{{i.price}}</p>
+      <div class="shopadd">
+        <button class="next" (click)='next(l,$event)'>-</button>
+        <input type="text" value="{{i.num}}" size="1" class="numb" id={{l}}>
+        <button class="add" (click)='add(l,$event)'>+</button>
+        <!-- <span (click)='remove(l,$event)'>删除</span> -->
+        <img src='assets/imgs/垃圾桶.png' (click)='remove(l,$event)' class="img2" width="20px">
+      </div>
+    </div>
+  </ion-item>
+</ion-content>
+<ion-footer class="footer">
+  <ion-item class="radio1" no-lines>
+    <div class="mycheck2">
+      <input type="checkbox" (click)='all()' class="che2" id="checkbox2">
+      <label for="checkbox2"></label>
+    </div>
+    <div>
+      <span class="span2">全选</span>
+      <span class="span3">合计 :
+        <span class="span4">￥{{total}}</span>
+      </span>
+    </div>
+  </ion-item>
+  <div class="jiesuan" (click)='gobuy2()'>
+    <span>结算</span>
+  </div>
+</ion-footer>

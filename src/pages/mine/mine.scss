@@ -1,0 +1,54 @@
+page-mine {
+    .div1{
+        background:linear-gradient(to top right, #e7767e, #f7d5da, #e9748f) ;
+        height: 135px;
+    }
+    .foot{
+        border-radius:50%;
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        overflow: hidden;
+        position: relative;
+        left: 155px;
+        top: 26px
+    } 
+    .span1{
+        position: relative;
+        top: 43px;
+        left: 168px;
+        color: white
+    }
+    .mine-list img{
+        height: 20px;
+    }
+    .content{
+        background-color: #f0edec
+    }
+    .item2{
+        position: relative;
+        top: 10px
+    }
+    .item3{
+        position: relative;
+        top: 22px
+    }
+    .item2 span{
+        position: relative;
+        top: -5px;
+        left: 5px;
+    }
+    .item3 span{
+        position: relative;
+        top: -5px;
+        left: 5px;
+    }
+    .item1 span{
+        position: relative;
+        top: -5px;
+        left: 5px;
+    }
+    .content button{
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,35 @@
+<ion-header text-center>
+
+  <ion-navbar color='home'>
+    <ion-title [ngStyle]="{'width':'80%'}">萌宠趣事</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="pet_content">
+  <ion-scroll class="pet_scroll" scrollY="true">
+    <ion-list class="pet_list">
+      <ion-item *ngFor="let item of itemArr">
+        <ion-label class="first_label">
+          <img src={{item.Bgimg}}>
+          <span>
+            {{item.title}}
+          </span>
+        </ion-label>
+        <ion-label class="second_label">
+          <p>{{item.title1}}</p>
+          <img src={{item.img}}>
+        </ion-label>
+        <ion-label class="third_label">
+          <p>{{item.title2}}</p>
+          <img src={{item.img}}>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-scroll>
+</ion-content>
+
+<ion-footer>
+  <button ion-button (click)="change()">换一批看看</button>
+</ion-footer>

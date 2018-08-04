@@ -1,0 +1,28 @@
+<!--
+  Generated template for the WelcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content>
+	<ion-slides pager (ionSlideDidChange)="slideChanged()">
+	  <ion-slide>
+	    <img src="assets/imgs/bg_start_001.png"/>
+	  </ion-slide>
+	  <ion-slide>
+	    <img src="assets/imgs/guide_01.png"/>
+	  </ion-slide>
+	  <ion-slide>
+	    <img src="assets/imgs/guide_02.png"/>
+	  </ion-slide>
+	  <ion-slide>
+	    <img src="assets/imgs/guide_03.png"/>
+	    <button ion-button color="home" class="button" (click)="goHome()" >
+				开启传送门
+			</button>
+	  </ion-slide>
+	</ion-slides>	
+	
+</ion-content>

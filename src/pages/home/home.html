@@ -1,0 +1,98 @@
+<ion-header text-center>
+  <ion-navbar color='home'>
+
+    <ion-title>
+      <ion-icon name='locate' class="locate"></ion-icon>
+      P.E.T
+      <ion-icon name='qr-scanner' class="scanner" (click)='qrscan()'></ion-icon>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home-content">
+  <ion-slides pager loop autoplay='1500' class="slide1">
+    <ion-slide>
+      <img src="assets/imgs/gou02.jpg" height="50%">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/haozi.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/gou.jpg">
+    </ion-slide>
+  </ion-slides>
+  <ion-grid class="home-grid">
+    <ion-row>
+      <ion-col (click)='go1()'>
+        <img src="assets/imgs/icon_sex.png">
+        <p>宠物相亲</p>
+      </ion-col>
+      <ion-col (click)='go2()'>
+        <img src="assets/imgs/icon_found.png">
+        <p>宠物招领</p>
+      </ion-col>
+      <ion-col (click)='go3()'>
+        <img src="assets/imgs/icon_adopt.png">
+        <p>宠物领养</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-item class="home-list1" no-lines>
+      <div class="list-div"></div>
+      <span>最新文章</span>
+    </ion-item>
+    <ion-item class="home-list2" no-lines>
+      <div class="list-div"></div>
+      <span>最新推荐</span>
+    </ion-item> -->
+  <ion-segment [(ngModel)]="txt" class="h-segment" color="home">
+    <ion-segment-button value="goods">
+      热卖推荐
+    </ion-segment-button>
+    <ion-segment-button value="paper">
+      最新文章
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="txt" class="h-div1">
+    <ion-list *ngSwitchCase="'paper'" class="h-list">
+      <ion-item class="h-item1">
+        <div class="h-div2">热门</div>
+        <span class="h-span1">抖音上热起来的四大宠物</span>
+        <ion-icon name='arrowr' item-end class="h-icon"></ion-icon>
+      </ion-item>
+      <ion-item class="h-item1">
+        <div class="h-div2" style="background-color: red">常识</div>
+        <span class="h-span1">主人错误喂法可导致狗狗厌食</span>
+        <ion-icon name='arrowr' item-end class="h-icon"></ion-icon>
+      </ion-item>
+      <ion-item class="h-item1">
+        <div class="h-div2" style="background-color: yellow">选宠</div>
+        <span class="h-span1">楼房养什么狗最省心 来看看为您推荐</span>
+        <ion-icon name='arrowr' item-end class="h-icon"></ion-icon>
+      </ion-item>
+      <ion-item class="h-item1">
+        <div class="h-div2" style="background-color: rgb(204, 0, 255)">推荐</div>
+        <span class="h-span1">我们永远在一起</span>
+        <ion-icon name='arrowr' item-end class="h-icon"></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'goods'" class="h-list">
+      <ion-item (click)='goshop1(i)' *ngFor="let i of shop;let l=index">
+        <ion-thumbnail item-start>
+          <img src={{i.img}}>
+        </ion-thumbnail>
+        <h2>{{i.name}}</h2>
+        <button class="btn">包邮</button>
+        <p class="price">￥{{i.price}}</p>
+        <p>
+          <span>xxx店</span>
+          <span class="loc">地点</span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+</ion-content>

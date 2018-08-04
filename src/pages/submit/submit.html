@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="home">
+    <ion-title class="til">提交订单</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item class="item2">
+    <span class="f-span3">收货人: {{u}}</span>
+    <p class="f-span4">收货地址： {{loc}}</p>
+  </ion-item>
+
+  <div *ngFor="let i of idarr;let l=index">
+    <ion-item class="item1">
+      <img src={{i.img}}>
+      <span class="f-span1">{{i.name}}</span>
+      <p class="price">￥{{i.price}}</p>
+      <span class="f-span2">x {{i.num}}</span>
+    </ion-item>
+  </div>
+  <ion-list class="f-list">
+    <button ion-item (click)="presentActionSheet()">
+      <span>配送方式</span>
+      <span class="fangfa">{{fangfa}}</span>
+    </button>
+    <button ion-item>
+      <span>运费险</span>
+      <span class="subinfo">卖家赠送</span>
+    </button>
+
+    <ion-item>
+      <ion-label>开具发票</ion-label>
+      <ion-radio checked={{check}} (click)="checked()"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="color: black">买家留言</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+<ion-footer class="footer">
+  <ion-item class="radio1" no-lines>
+    <ion-label>
+      <span class="span3">合计 : </span>
+      <span class="span4">￥{{num}}</span>
+    </ion-label>
+  </ion-item>
+  <div class="jiesuan">
+    <span (click)="gosubmit()">立即购买</span>
+  </div>
+</ion-footer>

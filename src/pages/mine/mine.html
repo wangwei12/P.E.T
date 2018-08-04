@@ -1,0 +1,49 @@
+<ion-header text-center>
+    <ion-navbar color='home'>
+        <ion-title>个人中心</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="content">
+    <div class="div1">
+        <div class="foot">
+            <img src="assets/imgs/touxiang2.jpg" class="img2">
+        </div>
+        <span class="span1">{{name}}</span>
+    </div>
+    <ion-list class="mine-list">
+        <ion-item class="item1" (click)='goperson()'>
+            <img src="assets/imgs/me_message.png">
+            <span>个人资料</span>
+        </ion-item>
+        <ion-item class="item2" (click)='gocar()'>
+            <img src="assets/imgs/me_order.png">
+            <span>我的订单</span>
+        </ion-item>
+        <ion-item class="item2" (click)='goyou()'>
+            <img src="assets/imgs/me_coupon.png">
+            <span>优惠券</span>
+        </ion-item>
+        <ion-item class="item2" (click)="goaddress()">
+            <img src="assets/imgs/move_location_icon.png">
+            <span>收货地址</span>
+        </ion-item>
+        <ion-item class="item2" (click)='gocollect()'>
+            <img src="assets/imgs/me_save.png">
+            <span>我的收藏</span>
+        </ion-item>
+        <ion-item class="item2">
+            <img src="assets/imgs/me_service.png">
+            <span>客服电话</span>
+        </ion-item>
+        <ion-item class="item2">
+            <img src="assets/imgs/me_sugguest.png">
+            <span>意见反馈</span>
+        </ion-item>
+        <ion-item class="item3">
+            <img src="assets/imgs/me_update.png">
+            <span>版本检测</span>
+        </ion-item>
+    </ion-list>
+    <button ion-button color="danger" round block (click)='loginOut();'>退出登录</button>
+</ion-content>

@@ -1,0 +1,92 @@
+<ion-header text-center>
+
+  <ion-navbar color='home'>
+    <ion-title class="ion-til">宠物商店</ion-title>
+    <ion-icon name='ios-cart-outline' class="car" (click)='GoCar()'></ion-icon>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content">
+  <ion-slides pager loop autoplay='1500' class="slide1">
+    <ion-slide *ngFor="let i of shoparr;let l=index">
+      <img src="{{shoparr[0].img}}" height="50%">
+    </ion-slide>
+  </ion-slides>
+  <ion-item no-lines>
+    <span class="til">{{shoparr[0].name}}</span>
+    <p class="price">￥{{shoparr[0].price}}</p>
+    <p class="last">
+      <span>运费 ：￥0-6</span>
+      <span class="sale">销量：5555</span>
+    </p>
+  </ion-item>
+  <ion-item class="item1" no-lines text-wrap>
+    <span class="item1-span">{{shoparr[0].text}}</span>
+  </ion-item>
+  <div class="tan2"></div>
+</ion-content>
+<ion-footer class="footer">
+
+  <div class="tan">
+    <div class="f-img">
+      <img src={{shoparr[0].img}} class="img4">
+    </div>
+    <div class="f-div1">
+      <img src="assets/imgs/叉号.png" class="f-img3" (click)='close()'>
+      <span class="f-span1">￥{{num2}}</span>
+      <p class='f-p1'>库存：1515</p>
+    </div>
+    <div class="f-div2">
+      <ion-item class="f-item1">
+        <span>购买数量</span>
+        <div class="f-div3">
+          <button class="next" (click)='next()'>-</button>
+          <input type="text" [(ngModel)]='number' size="1">
+          <button class="add" (click)='add()'>+</button>
+        </div>
+      </ion-item>
+    </div>
+    <button class="f-button" (click)='gocar()'>确定</button>
+  </div>
+
+  <div class="tan3">
+    <div class="f-img2">
+      <img src={{shoparr[0].img}} class="img4">
+    </div>
+    <div class="f-div12">
+      <img src="assets/imgs/叉号.png" class="f-img3" (click)='no2()'>
+      <span class="f-span1">￥{{num3}}</span>
+      <p class='f-p1'>库存：1515</p>
+    </div>
+    <div class="f-div22">
+      <ion-item class="f-item12">
+        <span>购买数量</span>
+        <div class="f-div32">
+          <button class="next" (click)='next2()'>-</button>
+          <input type="text" [(ngModel)]='number2' size="1">
+          <button class="add" (click)='add2()'>+</button>
+        </div>
+      </ion-item>
+    </div>
+    <button class="f-button2" (click)='gocar2()'> 确定</button>
+  </div>
+  <div class="imgs">
+    <img src="assets/imgs/商城.png" width="25px" class="img1">
+    <p class="p1">店铺</p>
+    <img src="assets/imgs/客服.png" width="35px" class="img2">
+    <p class="p2">客服</p>
+    <img src="assets/imgs/{{star}}.png" width="25px" class="img3" (click)='no()'>
+    <p class="p3">{{collect}}</p>
+  </div>
+
+  <div class="foot">
+    <div class="join" (click)='buy()'>
+      <span>立即购买</span>
+    </div>
+    <div class="buy" (click)='gobuy()'>
+      <span>加入订单</span>
+    </div>
+  </div>
+</ion-footer>

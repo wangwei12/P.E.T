@@ -1,0 +1,29 @@
+<ion-header text-center>
+
+  <ion-navbar color='home'>
+    <ion-title [ngStyle]="{'width':'80%'}">寻宠启示</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list class="list">
+    <ion-item *ngFor="let item of itemArr" class="first_item">
+      <img src={{item.img}} alt="">
+      <p>名字：<span>{{item.name}}</span></p>
+      
+      <br>
+      <p>性格：<span>{{item.text}}</span></p>
+      
+      <br>
+      <p>联系我： <span>{{item.phone}}</span></p>
+     
+      <br>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- <ion-footer text-center class="footer">
+  <button ion-button>确认发布</button>
+</ion-footer> -->

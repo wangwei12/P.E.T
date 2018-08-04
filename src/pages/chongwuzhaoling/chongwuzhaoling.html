@@ -1,0 +1,44 @@
+<ion-header text-center>
+
+  <ion-navbar color='home'>
+    <ion-title class="title">{{title}}</ion-title>
+    <span class="title1" (click)='fabu()'>发布</span>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="l-content">
+  <ion-item class="item1" no-lines>
+    <span class='span2'>宠物日常照片</span>
+    <div class="div1">
+      <div id="test-div" [innerHtml]="data"></div>
+      <div class="choose-img" (click)="getPicture()">
+        <ion-icon name='camera' class="camera"></ion-icon>
+        <span class="span3">选择照片</span>
+      </div>
+    </div>
+  </ion-item>
+  <ion-item class="item4" no-lines>
+    <ion-label>宠物品种</ion-label>
+    <ion-input placeholder="" [(ngModel)]='name'></ion-input>
+  </ion-item>
+  <ion-item class="item4" no-lines>
+    <ion-label>宠物年龄</ion-label>
+    <ion-input placeholder="" type="number" [(ngModel)]='years'></ion-input>
+  </ion-item>
+  <ion-item class="item2" no-lines>
+    <ion-label>性别</ion-label>
+    <ion-select [(ngModel)]="toppings" multiple="false" okText="确定" cancelText="取消">
+      <ion-option>雄性</ion-option>
+      <ion-option>雌性</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="item3" no-lines>
+    <textarea placeholder="宠主描述" class="text1" value='12'></textarea>
+  </ion-item>
+  <ion-item class="item3" no-lines>
+    <textarea placeholder="主人联系方式" class="text" value='12'></textarea>
+  </ion-item>
+
+</ion-content>

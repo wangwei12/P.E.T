@@ -1,0 +1,221 @@
+page-car {
+    .content{
+        background-color: #f0edec
+    }
+    .til{
+        position: relative;
+        left: -9%;
+    }
+    .footer{
+        background-color: #ffffff;
+        height: 50px;
+    }
+    .shopadd{
+        position: relative;
+        left: 174px;
+        top: -74px;
+    }
+    // .che{
+    //     position: relative;
+    //     width: 32px;
+    //     height: 17px;
+    //     top: 67px
+    // }
+    .che2{
+        position: relative;
+        top: 15px;
+        width: 32px;
+        height: 17px;
+    }
+    .numb{
+        text-align: center;
+        height: 17px;
+        width: 22px;
+        border: 1px #cccccc solid;
+        position: relative;
+        top: -1px;
+        font-size:11px
+    }
+    .span1{
+        position: relative;
+        top: -60px;
+        left: 10px;
+    }
+    .price{
+        position: relative;
+        left: 112px;
+        top:-50px;
+        color: red
+    }
+    .lab{
+        position: relative;
+        left: 15%;
+        top: 26px
+    }
+    .item1{
+        position: relative;
+        height: 95px;
+        margin-top: 10px
+    }
+    .img{
+        position: relative;
+        top: -11px;
+        border-radius: 5px
+    }
+    .img2{
+        position: relative;
+        top: 4px
+    }
+    .span2{
+        position: relative;
+        left: 40px;
+        top: -7px
+    }
+    .span3{
+        position: absolute;
+        right: 23%;
+        top: 31%
+    }
+    .span4{
+        color: red
+    }
+    .footer .label-md{
+        margin: 0
+    }
+    .item-radio-checked.item-md ion-label{
+        color:black
+    }
+    .jiesuan{
+        text-align: center;
+        position: relative;
+        background:linear-gradient(to right, #ff7500, #ff6300, #ff4d01);
+        left: 80%;
+        top: -44px;
+        width: 71px;
+        height: 50px;
+    }
+    .jiesuan span{
+        position: absolute;
+        top: 25%;
+        left: 33%;
+        color: #ffffff;
+        font-weight: 600
+    }
+    .checkbox-md .checkbox-checked{
+        border-color: #ff4d01;
+        background-color: #ff4d01
+    }
+    .footer .item.item-md .checkbox-md{
+        margin: 0
+    }
+    .next{
+        position: relative;
+        background: white;
+        left: 4px;
+        border: 1px #cccccc solid;
+        border-top-left-radius:5px ;
+        border-bottom-left-radius: 5px
+    }
+    .add{
+        position: relative;
+        background: white;
+        left: -4px;
+        border: 1px #cccccc solid;
+        border-top-right-radius:5px ;
+        border-bottom-right-radius: 5px
+    }
+    .mycheck2{
+        width: 25px;
+        position: relative;
+        top: 12px;
+    }
+    .mycheck2 input[type=checkbox] {
+        visibility:hidden;
+    }
+    .mycheck2 label {
+        cursor:pointer;
+        position:absolute;
+        width:25px;
+        height:25px;
+        top:0;
+        left:0;
+        background:#fff;
+        border:2px solid #ccc;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        border-radius:50%;
+    }
+    .mycheck2 label:after {
+        opacity:0;
+        content:'';
+        position:absolute;
+        width:9px;
+        height:5px;
+        background:transparent;
+        top:4px;
+        left:4px;
+        border:4px solid #fff;
+        border-top:none;
+        border-right:none;
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        transform:rotate(-45deg);
+    }
+    .mycheck2 input[type=checkbox]:checked + label {
+        background:#f40;
+        border:2px solid #f40;
+    }
+    .mycheck2 input[type=checkbox]:checked + label:after {
+        opacity:1;
+        background:#f40;
+    }
+    .mycheck {
+        width:25px;
+        top: 70px;
+        position:relative;
+    }
+    .mycheck input[type=checkbox] {
+        visibility:hidden;
+    }
+    .mycheck label {
+        cursor:pointer;
+        position:absolute;
+        width:25px;
+        height:25px;
+        top:0;
+        left:0;
+        background:#fff;
+        border:2px solid #ccc;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        border-radius:50%;
+    }
+    .mycheck label:after {
+        opacity:0;
+        content:'';
+        position:absolute;
+        width:9px;
+        height:5px;
+        background:transparent;
+        top:4px;
+        left:4px;
+        border:4px solid #fff;
+        border-top:none;
+        border-right:none;
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        transform:rotate(-45deg);
+    }
+    .mycheck input[type=checkbox]:checked + label {
+        background:#f40;
+        border:2px solid #f40;
+    }
+    .mycheck input[type=checkbox]:checked + label:after {
+        opacity:1;
+        background:#f40;
+    }
+}

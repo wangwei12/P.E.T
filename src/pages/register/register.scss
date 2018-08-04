@@ -1,0 +1,40 @@
+page-register {
+    .scroll-content{
+        padding-top: 100px;
+    }
+    ion-header{
+        background-color:transparent !important;
+        .toolbar-md-none .toolbar-title-md{
+            color: black;
+        }
+    }
+    ion-content{
+        background-image: url("../assets/imgs/bg_login02.png") !important;
+        background-size: 100%;
+        .item{
+            background-color:transparent;
+            color: black;
+        }
+        ion-item{
+            img{
+                width: 60%;
+                color: black;
+            }
+            
+            .btn0{
+                width: 30%;
+            }
+        }
+        p{
+            float: left;
+            margin-left: 75%;
+            color: black;
+        }
+        .btn1{
+            float: left;
+            width: 60%;
+            margin-top: 20px !important;
+            margin-left: 20% !important;
+        }
+    }
+}

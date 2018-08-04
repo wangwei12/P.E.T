@@ -1,0 +1,34 @@
+page-login {
+    .scroll-content{
+        padding-top: 100px;
+    }
+    ion-header{
+        background-color:transparent !important;
+        .toolbar-md-none .toolbar-title-md{
+            color: black;
+        }
+    }
+    ion-content{
+        .item1{
+            
+        }
+        background-image: url("../assets/imgs/bg_login02.png") !important;
+        background-size: 100%;
+        ion-item{
+            img{
+                width: 50%;
+            }
+            background-color:transparent !important;
+            color: black;
+        }
+        p{
+            margin-left: 75%;
+            color: black;
+        }
+        button{
+            float: left;
+            width: 30%;
+            margin-left: 12.5% !important;
+        }
+    }
+}
